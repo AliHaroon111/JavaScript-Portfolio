@@ -1,0 +1,11 @@
+things must to be search and revise
+
+
+function tea(teaType){
+    this.teaType= teaType
+    this.describe = function  (){
+        return `this is a cup of ${this.teaType}`
+    }  //this will tell which guy is using the obj
+}
+let lemonttea = new tea("lemon Tea")
+console.log(lemonttea.describe());

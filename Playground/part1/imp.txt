@@ -1,0 +1,11 @@
+We learned about
+
+Var
+len  ======> Both above almost same
+const
+
+
+<-------------ALWAYS REMEMBER------------>
+
+== ------> COMPARISON OPERATOR
+=  ------> ASSIGNMENT OPERATOR
