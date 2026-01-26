@@ -1,0 +1,33 @@
+🚀 Mini Project: "The Tea Shop Terminal"
+You are building a simple backend logic for a tea shop (inspired by your teaTypes variable). You need to calculate a customer's total bill and check if they qualify for a membership discount.
+
+Goal: Create a file named teashop.js and write code to solve this scenario.
+
+Scenario Requirements:
+Define Prices (Const):
+
+Create a const variable for the price of lemonTea (e.g., 50).
+
+Create a const variable for the price of coffee (e.g., 100).
+
+Customer Order (Let):
+
+Create variables for the quantity ordered: numTeas (e.g., 3) and numCoffees (e.g., 2).
+
+Calculate Total:
+
+Calculate the subTotal using multiplication and addition.
+
+Membership Logic (Logical Operators):
+
+Create a variable isMember = true.
+
+Create a variable totalSpend = subTotal.
+
+Logic: If the user is a Member (isMember) AND (&&) their totalSpend is greater than 300, print "You qualify for a discount!".
+
+Tip: You can use console.log(isMember && totalSpend > 300) to see a true/false result.
+
+The Receipt (Console Table):
+
+Use console.table to print the final details (e.g., { Item: "Total Bill", Cost: subTotal }).
