@@ -121,11 +121,11 @@ less than 3m population store in a new object
 
 /*======> 7
 
-['earl grey','green tea','chai','oloond tea']
+['earl grey','green tea','chai','oloong tea']
 when chai is found store all previos
  */
 
-// let Tealist = ['earl grey','green tea','chai','oloon tea']
+// let Tealist = ['earl grey','green tea','chai','oloong tea']
 
 // let avilableTeas = []
 // Tealist.forEach(tea => {      //ForEach work on Array

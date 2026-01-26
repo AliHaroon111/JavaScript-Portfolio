@@ -40,7 +40,7 @@
 
 // let citiesVisited = ['Mumbai','Sydney']
 
-// citiesVisited.push("Berlin")      //puss add new element at the end of array
+// citiesVisited.push("Berlin")      //push add new element at the end of array
 // console.log("berlin added",citiesVisited);
 
 
@@ -76,7 +76,7 @@
 
 // let topCities = ["Berlin", "Singapore",  "New York"]
 // let hardCopyCities = [...topCities];
-// // let hardCopyCities = topCities.slice();
+// // let hardCopyCities = topCities.slice(); //standard way to clone an array
 // topCities.pop();
 // console.log(hardCopyCities);
 

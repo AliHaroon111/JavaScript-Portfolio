@@ -10,7 +10,7 @@ while (i<=5) { // i<=6 instead if this i!=6 NOT right approach
 // console.log(sum);
 
 
-// Q2 Countdown from 1 to 5 store nnum in array name 'countdown
+// Q2 Countdown from 1 to 5 store num in array name 'countdown
 
 let countdown = [];
 i=5
