@@ -13,5 +13,5 @@ Practical applications and DOM manipulation projects.
 Algorithm solutions and logic building (LeetCode style problems).
 
 ### 3. 🎡 Playground
-My sandbox for testing syntax, loops, and foundational concepts.
+My sandbox for testing syntax by following Hitesh Choudhary WebDev Course on Udemy, loops, and foundational concepts.
 *(Note: This folder is for experimental learning code).*
