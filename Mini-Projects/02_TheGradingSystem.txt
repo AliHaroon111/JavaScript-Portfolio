@@ -1,0 +1,21 @@
+Mini Project: "The Grading System"
+You are building a system for COMSATS to automatically grade students based on their marks. This will practice if, else if, and logic.
+
+Goal:
+Requirements:
+
+Variables: Create a variable marks and assign it a number (e.g., 85).
+
+Logic Flow:
+
+If marks is 90 or above, print: "Grade: A (Excellent)"
+
+If marks is between 80 and 89, print: "Grade: B (Very Good)"
+
+If marks is between 70 and 79, print: "Grade: C (Good)"
+
+If marks is below 70, print: "Grade: F (Needs Improvement)"
+
+Bonus Challenge: Add a nested check. Inside the "Grade: A" block, check if marks is exactly 100. If so, also print "Perfect Score! Reward: Gold Medal".
+
+Hint: For the "between" logic, you need the AND operator (&&). Example: else if (marks >= 80 && marks < 90)
