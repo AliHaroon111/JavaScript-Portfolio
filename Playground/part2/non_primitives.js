@@ -1,22 +1,22 @@
-// let uesername = {
-//     firstname:"Ali",
-//     isLoggedIn : true, //  Memory reserved we can't change it BUT we can Change varible val/var(primitives) here
-// }
+let uesername = {
+    firstname:"Ali",
+    isLoggedIn : true, //  Memory reserved we can't change it BUT we can Change varible val/var(primitives) here
+}
 
-// uesername.firstname = "Mr Ali"
-// uesername.lastname = "Haroon"
+uesername.firstname = "Mr Ali"
+uesername.lastname = "Haroon"
 
-// console.log("fN",uesername.firstname);
-// console.log("LN",uesername.lastname);
+console.log("fN",uesername.firstname);
+console.log("LN",uesername.lastname);
 
 // // Above the Method is to Access the prmtiv by Dot 
 
 // // But when we Have a space like "First Name" then it not works So we need to have a proper method so see below is the method
-// let username1 = {
-//     "first name":"Ali",
-//     isLoggedIn : true, //  Memory reserved we can't change it BUT we can Change varible val/var(primitives) here
-// }
-// console.log("2nd way of Accecing pmtv",username1["first name"]);
+let username1 = {
+    "first name":"Ali",
+    isLoggedIn : true, //  Memory reserved we can't change it BUT we can Change varible val/var(primitives) here
+}
+console.log("2nd way of Accecing pmtv",username1["first name"]);
 
 // // let today = new Date();
 // // console.log(today.getDate());
@@ -49,3 +49,11 @@ console.log('Convert null in to Number',Number(null));
 
 // Convert null in to undefined
 console.log('Convert null in to undefined',Number(undefined));
+
+
+let course = {
+    courseName: "Web Dev",
+    "Course Instructor": "Hitesh" 
+};
+
+console.log(course["Course Instructor"]); 

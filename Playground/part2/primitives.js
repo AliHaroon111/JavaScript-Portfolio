@@ -12,9 +12,19 @@ let anotherBalance = new Number(120)
 // console.log('Another Balance is',(anotherBalance));
 // console.log('Another Balance only value',(anotherBalance.valueOf()));
 
+
 //  Goal to check the DataType of balane and anotherBalance
 console.log('Type of Balance is ===>',(typeof balance));
 console.log('Type of Another Balance is ===>',(typeof anotherBalance));
+
+// check this example
+// let primitive = 120;
+// let wrapper = new Number(120);
+
+// console.log(primitive == wrapper);  // true  (Loose equality coerces types)
+// console.log(primitive === wrapper); // false (Strict equality: "number" vs "object")
+
+
 
 // Bolean
 let isActive = true
@@ -23,7 +33,7 @@ let isRealyActive = new Boolean(true)    // Not recomended
 // Null and undefined ==============>
     
     // let firstname        //undefined
-    // when you comment it out  and check the below line code it's give error that it is not Defined 
+    // when you comment it out  and check the below line code it's give error that it is not Defined
     // console.log("firsname",firstname);
 
 //     let firstname1 = null;        //null
@@ -66,4 +76,6 @@ console.log("sm1==sm2", sm1==sm2);
 let sm3 = Symbol("ALI HAROON")
 let sm4 = Symbol("ALI HAROON")
 console.log(sm3);
-console.log("sm1==sm2", sm3==sm4);     // Symbol always retain Uniquiness
+console.log("sm1==sm2", sm3==sm4);    //False
+// Reason: sm1 creates Unique ID #1. sm2 creates Unique ID #2. They are distinct identities. 
+// Symbol always retain Uniquiness

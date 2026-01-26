@@ -1,0 +1,36 @@
+Mini Project: "The University ID Card Generator"
+You are building a system to generate digital ID cards for COMSATS students. This project requires using Objects, Symbols (for unique IDs), and Template Literals.
+
+Goal: Create a file named id_card.js.
+
+Requirements:
+
+Create a Symbol:
+
+Create a unique symbol for the student's database ID: const idSym = Symbol("id").
+
+Create a Student Object:
+
+The object should have these properties:
+
+name (String, e.g., "Ali Haroon")
+
+"full roll no" (String with spaces, e.g., "FA24-BCS-099") -> Requires bracket notation to access later!
+
+[idSym] (Use the symbol variable as a key) -> Syntax: [idSym]: "12345" inside the object.
+
+subjects (Array, e.g., ["DAA", "Web", "Calculus"]).
+
+Data Processing (Type Conversion):
+
+Assume you received the student's semester fee as a string from a form: let feeString = "55000".
+
+Convert it to a real Number: let feeNum = ...
+
+Add a penalty of 500 to the fee.
+
+Print the Card (Template Literals):
+
+Use backticks ` to print a formatted ID card.
+
+It must display the Name, the "Full Roll No", the first subject in their list (index 0), and the Final Fee Total.
