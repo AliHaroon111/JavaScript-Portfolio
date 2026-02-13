@@ -1,0 +1,37 @@
+/**
+Mini-Project: "The Spinning Mill Production Recorder (CLI)"
+
+ Initialize an empty array: let productionLog = [].
+Start a do-while loop.
+Inside the loop, use prompt-sync to ask for:
+Machine ID (e.g., "M-101")
+Production Count (e.g., "500"). Important: Convert this to a Number immediately!
+Validation Logic:
+If the user enters a production count equal to 0, do not add it to the array. Print "Machine reported breakdown, skipping."
+Otherwise, create an object: { id: machineInput, count: productionNumber } and push it into productionLog.
+Ask the user: "Add another machine? (yes/no)".
+The loop should continue only if the user types "yes".
+ 
+ 
+Phase 2: The Report Generator (for-of)
+After the user says "no", the program should print a report.
+
+Initialize totalProduction = 0.
+
+Use a for-of loop to iterate through your productionLog.
+
+Accumulate: Add each machine's count to totalProduction.
+
+Audit Check (Logic inside Loop):
+
+If a machine's production is less than 100, print: "⚠️ Low Output Alert: Machine [ID]"
+
+Final Output:
+
+Print the "Total Mill Production".
+
+Print the "Number of Active Machines" (Array length).
+
+
+ 
+ */

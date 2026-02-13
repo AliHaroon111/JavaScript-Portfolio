@@ -1,0 +1,24 @@
+{
+  "dependencies": {
+    "prompt-sync": "^4.2.0"
+  },
+  "name": "javascript-portfolio",
+  "version": "1.0.0",
+  "description": "Welcome to my JavaScript collection! This repository tracks my journey from basics to complex applications.",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/AliHaroon111/JavaScript-Portfolio.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "type": "module",
+  "bugs": {
+    "url": "https://github.com/AliHaroon111/JavaScript-Portfolio/issues"
+  },
+  "homepage": "https://github.com/AliHaroon111/JavaScript-Portfolio#readme"
+}
