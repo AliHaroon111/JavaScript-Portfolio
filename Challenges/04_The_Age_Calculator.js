@@ -4,9 +4,9 @@
 // Test: console.log(calculateAge(2000)) -> Should print 26
 
 let currentyear = 2026
-let age
+
 function calculateAge(birthYear){
-    age = currentyear-birthYear
+    let age = currentyear-birthYear
     
     if(birthYear<1850){
         console.log(`Enter the Valid Age Check ^^^^^${birthYear} too low....` )
