@@ -2,6 +2,8 @@
 import promptSync from "prompt-sync";
 const prompt = promptSync();//In Node.js (backend), we don't have the browser's prompt(). This line use for the user to type something 
 
+console.log("--- MILL PRODUCTION SYSTEM STARTED ---");
+
 let productionLog = []
 
 let machineID;
@@ -24,3 +26,16 @@ do {
 } while (cont.toLowerCase()=="yes");
 
 
+console.log("\n--- GENERATING DAILY REPORT ---");
+
+let totalProduction = 0
+
+for (const element of productionLog) {
+    totalProduction+=element["count"]
+    if(element["count"] < 100){
+        console.log(`⚠️ Low Output Alert: Machine ${element["id"]} produced only ${element["count"]}`);
+    }
+
+}
+
+console.log("Total Mill Production",totalProduction,`Number of Active Machines: ${productionLog.length}`)
