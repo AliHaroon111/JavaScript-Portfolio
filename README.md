@@ -5,6 +5,8 @@ Welcome to my JavaScript collection! This repository tracks my journey from basi
 ## 📂 Structure
 
 ### 1. 🌟 Mini-Projects
+In Mini Project section there are two Files One is **TS** and other one is **txt** 
+in **TS** extension code is writen and in the **txt** Requirement or Question is writen
 Practical applications and DOM manipulation projects.
 - **TBD**
 - **TBD**
