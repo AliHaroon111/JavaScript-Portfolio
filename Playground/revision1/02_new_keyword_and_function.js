@@ -12,4 +12,4 @@ function User(name) {
 let user2 = new User("Ali"); 
 
 console.log(user2); 
-console.log(name); // <--- Danger Zone
+// console.log(name); // <--- Danger Zone
