@@ -1,0 +1,31 @@
+"The E-Commerce Warehouse System"
+You are building the backend core for an online store. You need to handle different types of products, manage stock securely, and compare products.
+
+Theme: Use Classes, Inheritance, Private Fields, and Static Methods.
+
+Requirements:
+The Base Class: Product
+Constructor: Accepts name, price, and stock.
+
+Encapsulation: Make price a private field (#price).
+Getter: get price() should return the price with a currency sign (e.g., "$500").
+Setter: set price(value) should preventing setting a negative price.
+Method: displayInfo() returns "Product: [name], Stock: [stock]".
+
+The Subclass: Electronic
+Inheritance: Use extends Product.
+Constructor: Accepts name, price, stock, and warrantyPeriod.
+Super: You MUST use super(name, price, stock) inside the constructor.
+Polymorphism: Override displayInfo(). It should return the parent's info plus "Warranty: [warrantyPeriod] years".
+
+The Static Utility
+Add a static method inside Product called compareStock(product1, product2).
+It should return the Name of the product that has more stock.
+
+Execution Scenario (Write this at the bottom):
+Create a Product (e.g., "Generic Shirt", 500, 20).
+
+Create an Electronic (e.g., "Laptop", 150000, 5, 2).
+Try to set the Laptop price to -100 (Should trigger your error logic).
+Call displayInfo() on both (See how they behave differently).
+Call Product.compareStock(shirt, laptop) and print the winner.
