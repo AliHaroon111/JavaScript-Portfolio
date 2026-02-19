@@ -14,32 +14,29 @@ class Product{
 
     // Setter
     set price(value){
-
+        if(value<0){
+            console.error("Error: Price cannot be negative!");
+        }else{
+            this.#price=value
+        }
     }
     
     //method
     displayInfo(){ 
-        console.log(`Product: ${this.name} Stock: ${this.stock}`)
+        return `Product: ${this.name}, Stock: ${this.stock}`;
     } 
 
     // 3rd Part-Static Method
     static compareStock(product1 , product2){
         if(product1.stock>product2.stock){
-            console.log(`Product1 Stock was low ${product2.name}`)
+            return product1.name;
+        }else if(product1.stock<product2.stock){
+            return product2.name;   
         }else{
-            console.log(`Product1 Stock was low ${product1.name}`)
-            
+            return `Both are equal`
         }
     }
 }
-
-const shirt = new Product("Cotton Shirt", 25, 100);
-const laptop = new Product("Gaming Laptop", 1200, 50); // without this the belew line doesnt works
-
-console.log(Product.compareStock(shirt, laptop))
-
-// const Prod = new Product
-// Prod.compareStock(shirt, laptop)
 
 
 // 2nd Part
@@ -52,8 +49,28 @@ class Electronic extends Product{
     }
 
     displayInfo(){ 
-        console.log(`Product: ${this.name} Warrany: ${this.warrantyperiod}`)
-     } 
+        return `${super.displayInfo()} and Warranty ${this.warrantyperiod} years` // Here remove paranthesis and see what happens
+    } 
 
 }
 
+// Create a product 
+const shirt = new Product("Cotton Shirt", 25, 100);
+
+// Create a Electronic 
+const laptop = new Electronic("Laptop", 150000, 5, 2)
+
+
+// 3. Try to set negative price
+console.log("--- Testing Negative Price ---");
+laptop.price = 100; // Should trigger error logic ----> Check here for negative values
+
+
+// 4. Call displayInfo on both
+console.log("-Displaying Info-\n");
+console.log(shirt.displayInfo());
+console.log(laptop.displayInfo());
+
+console.log("Stock Comparison")
+const winner = Product.compareStock(shirt, laptop)
+console.log(`The Prdouct with more stock ${winner} is the winner `)
