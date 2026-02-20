@@ -52,3 +52,11 @@ for (const city of citArray) {
     }
 }
 console.log("Untravelled cities are:",UnvisitedCities)
+
+// for-loop
+table=[]
+for (let ind = 1; ind < 11; ind++) {
+    const entity = 2*ind;
+    table.push(entity)
+}
+console.log(table)
