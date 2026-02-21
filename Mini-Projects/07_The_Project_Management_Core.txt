@@ -1,0 +1,40 @@
+Advanced System Design: "The Project Management Core"
+You need to architect a system that handles generic tasks, specific bug reports, and the project board that manages them all.
+
+Goal:implement the following architecture.
+1. The Base Class: Task
+Constructor: Accepts title and assignee.
+
+Encapsulation: * Create a private field #status initialized to "To Do".
+
+Create a getter for status.
+
+Create a setter for status. The Catch: The setter must throw an Error if the new status is not exactly "To Do", "In Progress", "Review", or "Done".
+
+Method: getDetails() should return: "Task: [title] | Assigned to: [assignee] | Status: [status]".
+
+2. The Subclass: BugTicket
+Inheritance: extends Task.
+
+Constructor: Accepts title, assignee, and severity (e.g., "Low", "Medium", "Critical"). Remember to use super().
+
+Polymorphism: Override getDetails().
+
+If the severity is "Critical", it should return: "[URGENT] Bug: [title] | Assignee: [assignee] | Fix Immediately!"
+
+Otherwise, return the standard parent details plus the severity.
+
+3. The Manager Class: ProjectBoard
+This class does not inherit from Task; it manages them.
+
+Constructor: Initializes an empty array called taskList.
+
+Method: addTicket(ticket) pushes a new task/bug into the taskList.
+
+Method: getTicketsByStatus(searchStatus) uses the modern .filter() array method to return an array of tickets that match the requested status.
+
+Static Method: static getCriticalCount(boardInstance)
+
+This is a utility function. It should accept an instance of a ProjectBoard, loop through its taskList, and return the total number of BugTickets that have a "Critical" severity.
+
+Hint: You can use the instanceof keyword to check if a ticket is a BugTicket (e.g., ticket instanceof BugTicket).
