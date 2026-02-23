@@ -39,3 +39,26 @@ console.log('Filtered Array', filtereditem)
 
 ConcatedArr = newArr.concat(FilterArr)
 console.log("Added array",ConcatedArr)
+
+// Create an array of numbers: [3, 7, 12, 15, 20, 25]
+// •	Step 1: Use map() with an arrow function to double each number.
+// •	Step 2: Use filter() with an arrow function to get only numbers greater than 20.
+
+let arrMap = [3, 7, 12, 15, 20, 25]
+squaremapped =arrMap.map(arrMap=> arrMap*arrMap)
+console.log("map() with arrow function",squaremapped)
+
+filterNum = arrMap.filter(num => num>20)
+console.log("The filtered numbers are:",filterNum)
+
+// You have an array of prices: [120, 80, 50, 200, 150]
+// •	Step 1: Apply a 10% discount on each price using map().
+// •	Step 2: Calculate the total price after discount using reduce().
+
+priceArr = [120, 80, 50, 200, 150]
+
+discMap = priceArr.map(price => price*0.90)
+
+console.log("Original values are",priceArr,"Discounted values will be:",discMap)
+
+//array.includes()
