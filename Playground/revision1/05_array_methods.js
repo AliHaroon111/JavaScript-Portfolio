@@ -61,4 +61,25 @@ discMap = priceArr.map(price => price*0.90)
 
 console.log("Original values are",priceArr,"Discounted values will be:",discMap)
 
+const totalBill = discMap.reduce((acc, curr) => acc + curr, 0); 
+// Here acc contain all previous values of of Same Arr ----> discMap and current item after process // acc: total sum so far, curr: current price in the loop
+console.log("Total Bill after Discount:", totalBill);
+
+
+// You have an array of numbers: [2, 5, 8, 12, 15]
+// •	Step 1: Add 3 to each number using map().
+// •	Step 2: Keep only numbers divisible by 5 using filter().
+// •	Step 3: Find the sum of the remaining numbers using reduce().
+
+let arrNum1 = [2, 5, 8, 12, 15]
+
+let added3 = arrNum1.map(num => num+3)
+console.log(added3)
+
+let divBy5 = arrNum1.filter(num=> num % 5 === 0)
+console.log("The number divisible by 5:",divBy5)
+
+let remNumbers = divBy5.reduce((acc,curr)=>acc+curr)
+console.log("The remaining numbers:",remNumbers)
+
 //array.includes()
