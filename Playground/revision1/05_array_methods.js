@@ -82,4 +82,31 @@ console.log("The number divisible by 5:",divBy5)
 let remNumbers = divBy5.reduce((acc,curr)=>acc+curr)
 console.log("The remaining numbers:",remNumbers)
 
+// You have an array of names:
+// const names = ["ali", "Haroon", "bilal", "sara"];
+// •	Step 1: Use map() to capitalize the first letter of each name.
+// •	Step 2: Use reverse() to reverse the order of the array.
+// •	Step 3: Print each name using forEach().
+
+const names = ["ali", "Haroon", "bilal", "sara"];
+console.log("Capiatlized:",names.map(str => str.toUpperCase()));
+console.log("Reversed:",names.reverse());
+
+names.forEach(element => {
+    console.log(element)
+});
+
+// You have an array of numbers:
+// const numbers = [5, 10, 15, 20, 25, 30];
+// Tasks (Use Arrow Functions where needed):
+// 1.	Use splice() to remove the 2nd and 3rd numbers from the array.
+// 2.	Use slice() to get a new array containing the last 3 numbers.
+// 3.	Use map() to multiply each number in the sliced array by 2.
+// 4.	Use reduce() to calculate the total sum of the resulting numbers.
+
+const numbers = [5, 10, 15, 20, 25, 30];
+console.log("splice() to remove the 2nd and 3rd numbers :",numbers.splice(1-2))
+console.log("slice() :",numbers.slice(-3))
+console.log("map() to multiply each number:",numbers.map(numbers => numbers*2))
+console.log(" reduce() to calculate the total sum of the resulting numbers :",numbers.reduce((acc,curr)=>(acc+curr)));
 //array.includes()
