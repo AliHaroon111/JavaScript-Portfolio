@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>JS Drum Kit</title>
+  <link rel="stylesheet" href="style.css">
+  <link rel="icon" href="https://fav.farm/🔥" />
+</head>
+<body>
+
+
+  <div class="menu">
+    <div data-key="49" class="card" id="dark-toggle">
+      <kbd>1</kbd>
+      <span class="action">Toggle Dark Mode</span>
+    </div>
+    <div data-key="50" class="card">
+      <kbd>2</kbd>
+      <span class="action">Increase Font</span>
+    </div>
+    <div data-key="51" class="card">
+      <kbd>3</kbd>
+      <span class="action">Read Aloud</span>
+    </div>
+  </div>
+  
+  <!-- Reusing audio logic -->
+  <audio data-key="49" src="sounds/clap.wav"></audio>
+  <audio data-key="50" src="sounds/hihat.wav"></audio>
+  <audio data-key="51" src="sounds/kick.wav"></audio>
+
+<script>
+  
+  function activateCard(keyCode){
+    const audio = document.querySelector(`audio[data-key="${keyCode}"]`)
+    const card = document.querySelector(`.card[data-key="${keyCode}"]`)
+
+    if (!audio) return;
+    audio.currentTime = 0
+    audio.play()
+    card.classList.add('playing')
+
+    if(keyCode == "49"){
+      document.body.classList.toggle("dark-mode")
+    }
+  }
+  
+  window.addEventListener('keydown',(e) => activateCard(e.keyCode))
+
+  function removeTransition(e){
+    if (e.propertyName !== 'transform') return;
+    this.classList.remove('playing')
+  }
+  const cards = document.querySelectorAll('.card')
+  cards.forEach( card => card.addEventListener('transitionend', removeTransition))
+
+  // Now All works for keyboard now Below for mouse
+  cards.forEach( card => { card.addEventListener('click', function(e){
+    const keyCode = this.getAttribute('data-key');
+    activateCard(parseInt(keyCode));
+  })
+
+  })
+</script>
+
+
+</body>
+</html>
