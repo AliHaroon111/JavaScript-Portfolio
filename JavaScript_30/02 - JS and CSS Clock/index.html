@@ -91,10 +91,17 @@
       const hours = now.getHours();
       const hourDegrees =(( hours/24)*360) + 90
       hourHand.style.transform = `rotate(${hourDegrees}deg)`
-
+      
       console.log(seconds)
+      // Debug
+      if (seconds === 0){
+        secondHand.style.transition = 'none';
+      } else {
+        secondHand.style.transition = 'all 0.05s';
+        secondHand.transitionTimingFunction = 'cubic-bezier(0, 2.32, 0.32, 1.1)';
+      }
     }
-
+    
     setInterval(setDate, 1000);
   </script>
 </body>
