@@ -10,9 +10,10 @@
 
     <div class="clock">
       <div class="clock-face">
-        <div class="hand hour-hand"></div>
+        <div class="needle"></div>
       </div>
     </div>
+    <div class="display-load">Current load :<span class="load-value">0</span></div>
 
 
   <style>
@@ -55,19 +56,49 @@
       transform: translateY(-3px); /* account for the height of the clock hands */
     }
 
-    .hand {
-      width: 50%;
-      height: 6px;
-      background: black;
-      position: absolute;
-      top: 50%;
-    }
+    .needle {
+  width: 50%;
+  height: 4px; /* Thinner than the clock hand */
+  background: black;
+  position: absolute;
+  top: 50%;
+  /* The "Pro" Needle Look: Pointy at one end */
+  border-radius: 50% 0 0 50%; 
+  transform-origin: 100%; 
+  transform: rotate(90deg);
+  transition: all 0.5s cubic-bezier(0.1, 2.7, 0.58, 1);
+}
 
+.display-load {
+  font-family: 'helvetica neue', sans-serif;
+  font-size: 3rem;
+  margin-top: 20px;
+  color: white;
+}
   </style>
-
   <script>
 
+    const needle = document.querySelector('.needle')
+    const loadText = document.querySelector('.load-value')
+    function updateGauge(){
+      const cpuUsage = Math.floor(Math.random()*101)
+      const cpuDegrees = ((cpuUsage/100)*180) + 90
+      needle.style.transform = `rotate(${cpuDegrees}deg)`
+        //Update the text display
+      loadText.textContent = cpuUsage
+    
+      if(cpuUsage>=80){
+        needle.style.background = 'red'
+        loadText.style.color = 'red'
+      } else {
+        needle.style.background = 'rgb(0, 255, 0)'; // Green
+        loadText.style.color = 'white';
+      }
 
+    }
+
+  setInterval(updateGauge, 2000);
+ 
   </script>
 </body>
 </html>
