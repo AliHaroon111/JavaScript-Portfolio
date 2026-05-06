@@ -53,11 +53,25 @@
     // 2. Give us an array of the inventors first and last names
     const FNLN = inventors.map(inventor => `${inventor['first']} ${inventor['last']}`)
     console.log(FNLN)
+    
     // Array.prototype.sort()
     // 3. Sort the inventors by birthdate, oldest to youngest
-
+    // Simple way
+    const sortSimple = inventors.sort(function(a,b){
+      if(a.year > b.year){
+        return 1
+      } else {
+        return -1
+      }
+    })
+    console.log("Using simple Function",sortSimple)
+    // do same ShortHand proMethod
+    const sortInventors = inventors.sort((a,b) => ( a.year > b.year ? 1 : -1 ))
+    console.table(sortInventors)
+    
     // Array.prototype.reduce()
     // 4. How many years did all the inventors live all together?
+
 
     // 5. Sort the inventors by years lived
 
