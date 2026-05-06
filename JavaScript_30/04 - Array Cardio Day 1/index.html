@@ -45,13 +45,14 @@
       }
     })
     console.log('List of fifteen using simple function',fifteens)
-
     // With Arrow func
     const listInv = inventors.filter( (inventor,index) => inventor['year'] >= 1500 && inventor['year'] <= 1599)
     console.log('List of fifteen using simple Arrow function',listInv)
+    
     // Array.prototype.map()
     // 2. Give us an array of the inventors first and last names
-
+    const FNLN = inventors.map(inventor => `${inventor['first']} ${inventor['last']}`)
+    console.log(FNLN)
     // Array.prototype.sort()
     // 3. Sort the inventors by birthdate, oldest to youngest
 
