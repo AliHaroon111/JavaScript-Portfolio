@@ -116,6 +116,38 @@
     // 8. Reduce Exercise
     // Sum up the instances of each of these
     const data = ['car', 'car', 'truck', 'truck', 'bike', 'walk', 'car', 'van', 'bike', 'walk', 'car', 'van', 'car', 'truck' ];
+   
+  //  Simple Method
+    let car = 0
+    let van = 0
+    let bike = 0
+    let truck = 0
+    let walk = 0
+    data.forEach(element => {
+      if(element==="car"){
+        car++
+      }
+      if(element==="van"){
+        van++
+      }
+      if(element==="bike"){
+        bike++
+      }
+      if(element==="truck"){
+        truck++
+      }
+      if(element==="walk"){
+        walk++
+      }
+
+    });
+    console.log("car",car)
+    console.log("van",van)
+    console.log("bike",bike)
+    console.log("truck",truck)
+    console.log("walk",walk)
+
+    // Now Pro method using Reduce
 
   </script>
 </body>
