@@ -115,7 +115,7 @@
     
     // 8. Reduce Exercise
     // Sum up the instances of each of these
-    const data = ['car', 'car', 'truck', 'truck', 'bike', 'walk', 'car', 'van', 'bike', 'walk', 'car', 'van', 'car', 'truck' ];
+    const data = ['car', 'car', 'truck', 'truck', 'bike', 'walk', 'car', 'van', 'bike', 'walk', 'car', 'van', 'car', 'truck' ,'new'];
    
   //  Simple Method
     let car = 0
@@ -145,10 +145,17 @@
     console.log("van",van)
     console.log("bike",bike)
     console.log("truck",truck)
-    console.log("walk",walk)
+    console.log("walk using simple method",walk)
 
     // Now Pro method using Reduce
-
+    const transport = data.reduce((acc,curr) =>{
+      if(!acc[curr]){
+        acc[curr]=0
+      }
+       acc[curr]++
+       return acc;
+      },{})
+      console.log(transport)
   </script>
 </body>
 </html>
