@@ -51,13 +51,24 @@
     //   if(comment.id==823423){return true} } )
 
     // pro way
-    const comment = comments.find(comment => comment.id === 823423);
+    const comment = comments.find(comment => comment.id === 823423); //find returns boolead so we dont need to return
       console.log(comment)
       
-    // Array.prototype.findIndex()
+    // Array.prototype.findIndex()   =====> Find where something is inside of the array
     // Find the comment with this ID
     // delete the comment with the ID of 823423
-
+    const index = comments.findIndex(comment => comment.id == 823423)
+    console.log(index)
+    // delete
+    // comments.splice(index, 1)
+    
+    // to build a new arr after deletion
+    const newComments = [
+      ...comments.splice(0,index),
+      ...comments.splice(index + 1)
+    ]
+    console.table(comments)
+    console.table(newComments)
   </script>
 </body>
 </html>
