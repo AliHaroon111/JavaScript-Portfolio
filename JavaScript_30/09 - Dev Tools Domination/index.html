@@ -19,28 +19,71 @@
     }
 
     // Regular
+    console.log("Hello Ali! Have Learnt about simple regular Dev tool")
 
     // Interpolated
+    console.log("Hello I am a %s string!",'🧑‍💻') // looks Pro if you use backticks
 
     // Styled
+    console.log("%c i am some great text","font-size:30px;  color:cyan; background:black; ")
 
     // warning!
-
+    console.warn("OH NOOO")
+    
     // Error :|
+    console.error('Shift!')
 
     // Info
+    console.info('Crocodiles eat 3-4 and half people per year')
 
     // Testing
+    console.assert(1===2,"That is wrong!") //console.assert will only fire if something went wrong
+
+    // if i want to grab paragraph on page
+    const p = document.querySelector('p')
+
+    console.assert(p.classList.contains('nope'),
+  'That is wrong!') //if it's true nothing will happen
+
 
     // clearing
+                // console.clear()
 
     // Viewing DOM Elements
-
+    console.log(p)
+        // How do you know what are the Available' methods' and all 'properties' on that element
+    console.dir(p)
     // Grouping together
+    dogs.forEach(dog =>{ 
+      // what if we have to made Group
+      console.group(`${dog.name}`)
+      console.log(`This is ${dog.name}`);
+      console.log(`The ${dog.name} is ${dog.age} years old`)
+      console.log(`The ${dog.name} is ${dog.age * 7} years old`)
+      
+      console.groupEnd(`${dog.name}`)
+
+    })
 
     // counting
+    console.count('Ali')
+    console.count('Ali')
+    console.count('Ali')
+    console.count('Ali')
+    console.count('Ali')
+    console.count('Haroon')
+    console.count('Haroon')
+    console.count('Haroon')
+    console.count('Haroon')
 
     // timing
+    console.time("fetching data")
+    fetch('https://jsonplaceholder.typicode.com/users').then(blob => blob.json()).then(data =>{
+      console.timeEnd('fetching data');
+      console.log(data);
+    });                    // it will tell uss how much time it takes to fetch
+
+    console.table(dogs)
 
   </script>
 </body>
