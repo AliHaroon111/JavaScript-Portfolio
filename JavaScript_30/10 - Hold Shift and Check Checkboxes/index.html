@@ -97,6 +97,33 @@
   </div>
 
 <script>
+  const checkboxes = document.querySelectorAll('.inbox input[type="checkbox"]')
+  console.log(checkboxes)
+
+  let fistClicked = [];
+  let lastClicked = [];
+
+
+
+  function handleCheck(e){
+    console.log(e)
+    fistClicked.push(this.e)
+  }
+  console.log(fistClicked)
+  
+  function shiftClicked(e){
+    if (e.shiftKey){
+      console.log("Shift key down")
+      lastClicked.push(this.e)
+    }
+  }
+  console.log(lastClicked)
+  
+  checkboxes.forEach(checkboxe => checkboxe.addEventListener('click',handleCheck))
+  // event for shiftKey
+  window.addEventListener('keydown',shiftClicked
+  )
+  
 </script>
 </body>
 </html>
