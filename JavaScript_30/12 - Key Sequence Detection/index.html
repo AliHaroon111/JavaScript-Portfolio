@@ -10,23 +10,27 @@
     <script>
       // array for key pressed
       const pressed = [];
-      const secretCode = 'wesbos'
+      const secretCode = 'haroon'
       
       window.addEventListener('keyup',(e)=>{
         console.log(e.key)
         pressed.push(e.key)
-        // THE MOVING WINDOW LOGIC: 
-        // This line ensures our array never gets larger than the secret code length.
-        // It constantly trims older keys from the front as new keys are added to the back.
-        pressed.splice(-secretCode.length - 1, pressed.length - secretCode.length);
-
-        // // Uncomment and and see BTS math
-        // console.log("Check how value calculated -secretCode.length ",-secretCode.length - 1)
-        // console.log("Check how value calculated pressed - secretCode ",pressed.length - secretCode.length)
+        /**
+      *  THE MOVING WINDOW LOGIC: 
+      * Maintains a sliding window matching the exact length of our secret code (6 characters).
+      * Negative start index (-7) targets the oldest elements forcing an upstream trim, 
+      * while the delete count pushes out exactly 1 overflow character per keypress.
+      */
+        pressed.splice(-secretCode.length - 1, pressed.length - secretCode.length); //this deleting from last 6 mean it delete the - 7th and so on and only keep the 6 digit
 
         // Check if our array matches the secret code string
+        if(pressed.join('').includes(secretCode)){
+          console.log('DING DING! Secret Code Activated!');
+          cornify_add(); // A built-in fun function from Wes that drops random unicorns onto the screen
+        }
 
-      })
+        console.log(pressed); // Watch the array update in real-time in your console
+      });
     </script>
   </body>
 </html>
