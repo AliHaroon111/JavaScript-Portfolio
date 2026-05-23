@@ -7,6 +7,26 @@
     <link rel="icon" href="https://fav.farm/🔥" />
   </head>
   <body>
-    <script></script>
+    <script>
+      // array for key pressed
+      const pressed = [];
+      const secretCode = 'wesbos'
+      
+      window.addEventListener('keyup',(e)=>{
+        console.log(e.key)
+        pressed.push(e.key)
+        // THE MOVING WINDOW LOGIC: 
+        // This line ensures our array never gets larger than the secret code length.
+        // It constantly trims older keys from the front as new keys are added to the back.
+        pressed.splice(-secretCode.length - 1, pressed.length - secretCode.length);
+
+        // // Uncomment and and see BTS math
+        // console.log("Check how value calculated -secretCode.length ",-secretCode.length - 1)
+        // console.log("Check how value calculated pressed - secretCode ",pressed.length - secretCode.length)
+
+        // Check if our array matches the secret code string
+
+      })
+    </script>
   </body>
 </html>
