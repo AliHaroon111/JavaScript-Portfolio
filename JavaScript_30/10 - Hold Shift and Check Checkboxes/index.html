@@ -100,30 +100,30 @@
   const checkboxes = document.querySelectorAll('.inbox input[type="checkbox"]')
   console.log(checkboxes)
 
-  let fistClicked = [];
-  let lastClicked = [];
-
-
+  let lastClicked;
 
   function handleCheck(e){
-    console.log(e)
-    fistClicked.push(this.e)
-  }
-  console.log(fistClicked)
-  
-  function shiftClicked(e){
-    if (e.shiftKey){
-      console.log("Shift key down")
-      lastClicked.push(this.e)
+    //check if they had the Shift keydown
+    // And check they are checking the checkbox
+    let inBetween = false;
+    if(e.shiftKey && this.checked){
+      //go ahead and do what we please
+      //loop over every single checkbox
+      checkboxes.forEach(checkbox =>{
+        console.log(checkbox)
+        if(checkbox === this || checkbox === lastClicked){
+          inBetween == !inBetween;
+          console.log("Starting checking in Between")
+        }
+        if(inBetween){
+        checkbox.checked = true
+      }
+      })
     }
+    lastClicked =  this
   }
-  console.log(lastClicked)
   
   checkboxes.forEach(checkboxe => checkboxe.addEventListener('click',handleCheck))
-  // event for shiftKey
-  window.addEventListener('keydown',shiftClicked
-  )
-  
 </script>
 </body>
 </html>
