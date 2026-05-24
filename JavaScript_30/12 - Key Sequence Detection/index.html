@@ -24,7 +24,7 @@
         pressed.splice(-secretCode.length - 1, pressed.length - secretCode.length); //this deleting from last 6 mean it delete the - 7th and so on and only keep the 6 digit
 
         // Check if our array matches the secret code string
-        if(pressed.join('').includes(secretCode)){
+        if(pressed.join('').toLowerCase().includes(secretCode)){
           console.log('DING DING! Secret Code Activated!');
           cornify_add(); // A built-in fun function from Wes that drops random unicorns onto the screen
         }
